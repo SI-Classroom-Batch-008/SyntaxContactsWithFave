@@ -52,7 +52,7 @@
             app:layout_constraintTop_toBottomOf="@id/layout_info"
             android:orientation="vertical"
             android:gravity="center"
-            android:visibility="visible"
+            android:visibility="gone"
             >
             <TextView
                 android:id="@+id/tv_email"
@@ -77,7 +77,7 @@
                 android:id="@+id/btn_fav"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Button" />
+                android:text="ADD TO FAV" />
 
 
         </androidx.appcompat.widget.LinearLayoutCompat>

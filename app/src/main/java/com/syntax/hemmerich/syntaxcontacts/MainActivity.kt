@@ -22,4 +22,11 @@ class MainActivity : AppCompatActivity() {
         recView.setHasFixedSize(true)
 
     }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+    }
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+        super.onRestoreInstanceState(savedInstanceState)
+    }
 }
