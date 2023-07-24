@@ -13,16 +13,28 @@ import com.syntax.hemmerich.syntaxcontacts.data.model.Contact
 import com.syntax.hemmerich.syntaxcontacts.databinding.ContactItemBinding
 import com.syntax.hemmerich.syntaxcontacts.databinding.FavItemBinding
 
+/*
+    TODO: Kommentar einfügen
+ */
 class ContactsAdapter(private val context: Context, private var dataSet: List<Contact>) :
     RecyclerView.Adapter<ViewHolder>() {
 
+    /*
+        TODO: Kommentar einfügen
+     */
     private val FAVVIEWTYPE = 0
     private val CONTACTVIEWTYPE = 1
 
+    /*
+        TODO: Kommentar einfügen
+     */
     class ContactViewHolder(val binding: ContactItemBinding) : ViewHolder(binding.root)
     class FavViewHolder(val binding: FavItemBinding) : ViewHolder(binding.root)
 
 
+    /*
+        TODO: Kommentar einfügen
+     */
     override fun getItemViewType(position: Int): Int {
         if(dataSet[position].isFav){
             return FAVVIEWTYPE
@@ -31,8 +43,10 @@ class ContactsAdapter(private val context: Context, private var dataSet: List<Co
         }
     }
 
+    /*
+        TODO: Kommentar einfügen
+     */
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-
         if(viewType == FAVVIEWTYPE){
             val binding = FavItemBinding.inflate(LayoutInflater.from(parent.context),parent,false)
             return FavViewHolder(binding)
@@ -42,10 +56,16 @@ class ContactsAdapter(private val context: Context, private var dataSet: List<Co
         }
     }
 
+    /*
+        TODO: Kommentar einfügen
+     */
     override fun getItemCount(): Int {
         return dataSet.size
     }
 
+    /*
+        TODO: Kommentar einfügen
+     */
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         var contact = dataSet[position]
         if(holder is ContactViewHolder){
@@ -89,8 +109,5 @@ class ContactsAdapter(private val context: Context, private var dataSet: List<Co
                 notifyItemChanged(position)
             }
         }
-
-
     }
-
 }

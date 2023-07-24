@@ -2,6 +2,10 @@ package com.syntax.hemmerich.syntaxcontacts.data
 
 import com.syntax.hemmerich.syntaxcontacts.data.model.Contact
 
+/*
+    TODO: Kommentar einfügen
+ */
+
 class Datasource {
     fun loadContacts():List<Contact>{
         return listOf(
